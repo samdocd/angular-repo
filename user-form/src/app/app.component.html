@@ -1,0 +1,133 @@
+<div class="container-fluid">
+<h1>{{title }}</h1>
+
+<div class="container-fluid">
+  <!--Form Defination-->
+  <form class="form-control bg-light" [formGroup]="sForm" (ngSubmit)="register()">
+    <div class="row mt-2 justify-content-center">
+      <div class="col-md-2"> 
+        <span style="color:red;font-size: large;">*</span> <Label class="form-label">Full Name</Label> <!--Full Name-->
+      </div>
+      <div class="col-md-2">
+        <input type="text" class="form-control-sm" id="fname" name="fname" formControlName="name"/>
+        <span style="color:red;font-size: x-small;" *ngIf="name && name.touched && name.invalid">Name is Required</span>
+        
+      </div>
+      <div class="col-md-2">
+        <span style="color:red;font-size: large;">*</span><Label class="form-label">NIFF Number</Label> <!--NIFF Number-->
+      </div>
+      <div class="col-md-2">
+        <input type="text" class="form-control-sm" id="niff" name="niff" formControlName="niff" maxlength="9" (keypress)="keyPressNumbers($event)"/>
+        <span style="color:red;font-size: xx-small;" *ngIf="niff && niff.invalid && niff.touched">Valid 9 Digit Niff Required</span>
+      </div>
+    </div>
+    <div class="row mt-2 justify-content-center">
+      <div class="col-md-2">
+        <span style="color:red;font-size: large;">*</span><Label class="form-label">E-Mail Address</Label> <!--Email Address-->
+      </div>
+      <div class="col-md-2">
+        <input type="email" class="form-control-sm" id="email" name="email" formControlName="email"/>
+        <span style="color:red;font-size: x-small;" *ngIf="email && email.invalid && email.touched">Valid Email Address is Required</span>
+      </div>
+      <div class="col-md-2">
+        <span style="color:red;font-size: large;">*</span><Label class="form-label">Date of Birth</Label> <!--Date of Birth-->
+      </div>
+      <div class="col-md-2">
+        <input type="date" class="form-control-sm" id="dob" name="dob" formControlName="dob" [value]="dob"/>
+        <span style="color:red;font-size: xx-small;" *ngIf="dob && dob.invalid && dob.touched">Age is Required to be Above 18 Years</span>
+       </div>
+    </div>
+
+    <div class="row mt-2 justify-content-center">
+      <div class="col-md-2">
+        <span style="color:red;font-size: large;">*</span> <Label class="form-label">Country</Label> <!--Country-->
+      </div>
+      <div class="col-md-2">
+        
+          <select class="form-control-sm" formControlName="country">
+                 <option *ngFor="let count of countries" [ngValue]="count.id">{{count.name}}</option>
+           </select>
+          <span style="color:red;font-size: x-small;" *ngIf="country && country.invalid && country.touched">Required</span>
+      </div>
+      <div class="col-md-2">
+        <span style="color:red;font-size: large;">*</span><Label class="form-label">City</Label> <!--City-->
+      </div>
+      <div class="col-md-2">
+        <select class="form-control-sm" formControlName="city">
+            <option *ngFor="let count of selectedCountry" [ngValue]="count.id">{{count.cname}}</option>
+        </select>
+        <span style="color:red;font-size: x-small;" *ngIf="city && city.invalid && city.touched">Required</span>
+      </div>
+    </div>
+
+    <div class="row mt-2 justify-content-center">
+      <div class="col-md-2">
+        <span style="color:red;font-size: large;">*</span><Label class="form-label">Address</Label>
+      </div>
+      <div class="col-md-6">
+        <input type="text" class="form-control-sm col-md-11" id="address" name="address" formControlName="address"/>
+        <span style="color:red;font-size: x-small;" *ngIf="address && address.invalid && address.touched">Required</span>
+      </div>
+    </div>
+    <div class="row mt-2 justify-content-center">
+      <div class="col-md-2">
+        <span style="color:red;font-size: large;">*</span><Label class="form-label">Postal Code</Label>
+      </div>
+      <div class="col-md-2">
+        <input type="text" class="form-control-sm" formControlName="pcode" maxlength="8" placeholder={{pcodeplaceholder}}/>
+        <div *ngIf="pcode.errors && pcode && pcode.invalid && pcode.touched">
+          <span style="color:red;font-size: x-small;" *ngIf="pcode?.errors?.['required']">Required</span>
+          <span style="color:red;font-size: x-small;" *ngIf="pcode?.errors?.['pattern']">use Correct P.O Box Number</span>
+          <span style="color:red;font-size: x-small;" *ngIf="pcode?.errors?.['maxlength']">length</span>
+
+          
+        </div>
+        
+      </div>
+
+      <div class="col-md-2">
+        <span style="color:red;font-size: large;">*</span><Label class="form-label">Phone</Label>
+      </div>
+      <div class="col-md-2">
+        <input type="tel" class="form-control-sm" id="phone" name="phone" formControlName="phone" maxlength="9" (keypress)="keyPressNumbers($event)"/>
+        <div *ngIf="phone.errors && phone && phone.invalid && phone.touched">
+          <span style="color:red;font-size: x-small;" *ngIf="phone?.errors?.['required']">Required</span>
+          <span style="color:red;font-size: x-small;" *ngIf="phone?.errors?.['pattern']">use Correct Phone Number</span>
+          
+
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-2 justify-content-center">
+       <div class="col-md-2">
+        <span style="color:red;font-size: large;">*</span><Label class="form-label">Gender</Label>
+      </div>
+      <div class="col-md-2">
+        <div class="form-check">
+        <input type="radio" class="form-check-input" value="Male" id="male" name="gender" formControlName="gender"/>
+        <label class="form-check-label">Male</label>
+        </div>
+        <div class="form-check">
+        <input type="radio" class="form-check-input" value="Female" id="female" name="gender" formControlName="gender"/>
+       <label class="form-check-label">Female</label>
+        
+      </div>
+      
+      
+      </div>
+    </div>
+    <span style="color:red;font-size: smaller;">Fields Marked with * are required...</span>
+    <div class="row mt-2 justify-content-center">
+      <div class="col-md-2">
+       <button  class="btn btn-primary" [disabled]="!sForm.valid">Sign Up</button>
+     </div>
+    </div>
+    
+
+  </form>
+</div>
+
+</div>
+  
