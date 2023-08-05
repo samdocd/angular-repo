@@ -1,0 +1,64 @@
+<div class="dopen-button">
+  <button ejs-button cssClass="e-custom" (click)="onOpenDialog($event)" >Open Dialog Box</button>
+ 
+  
+</div>
+
+
+      <div #container class='root-container'></div>
+     
+      <ejs-dialog class="modalclass" [isModal]="isModal" id='dialog' #template height='31.25rem'  width='50rem' 
+      [position]="dialogPosition" [target]='targetElement' [visible]="false" (overlayClick)="onOverlayClick()" [autocapitalize]="autocap">
+        <ng-template #header>
+          <div class="grid-container">
+            <div class="grid-item"><div class="text-header">Registe a sua Empresa </div></div>
+          <div class="grid-item"><i class="qmark fa-solid fa-question"></i><i (click)="closeDialog($event)" class="xmark fa-solid fa-x"></i></div>
+          
+          </div>
+       </ng-template>
+      
+        <ng-template #content>
+            <div class="dialogContent">
+              
+              <div class="tabcontainer">
+               
+              <ejs-tab cssClass="tab_content" headerPlacement="top" [animation]="animation" [autocapitalize]="autocap">
+                <div  class="e-tab-header" cssClass="etabheader">
+                  <div>NIPC/NIFF</div>
+                  <div>Certidão Permanente</div>
+                  </div>
+              <div class="e-content">
+                <div style="text-align: center;">
+                <div class="label-container">
+                  <div class="wrap"><label class='label'>NIPC/NIFF</label>
+                  <ejs-maskedtextbox mask='000-000-000'></ejs-maskedtextbox></div> 
+                </div>
+              </div>
+                
+                <div style="text-align: center;">
+                <div class="label-container" >
+                    <div class="wrap"><label class='label'>Certidão Permanente</label>
+                    <ejs-maskedtextbox mask='000-000-000' cssClass="e-style"></ejs-maskedtextbox></div>
+                    
+                 </div> 
+                </div>
+                 <div><button ejs-button cssClass="ecustom3">Validar</button></div>
+              
+            
+            </div>
+             </ejs-tab> 
+            </div>
+            
+
+            </div>
+          </ng-template>
+        
+          <ng-template  #footerTemplate>
+            <div Class="dialog-footer"><button ejs-button cssClass="e-custom2">Começar com Empresa Modelo</button><button ejs-button cssClass="e-custom">Avançar</button></div>
+            
+          </ng-template>
+        
+      </ejs-dialog>
+      
+
+      

@@ -1,0 +1,348 @@
+.dopen-button
+{
+    text-align:center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin:0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog-header{
+    height: 3.313rem; 
+    width: 50rem; 
+    padding: 1rem 1.5rem 0.25rem 1.5rem;
+}
+
+.e-dialog .e-dlg-header 
+{
+width: 100%;
+}
+
+.xmark
+{
+    font-size: 0.875rem; 
+    color: rgb (51, 51, 51); 
+    text-align: right; 
+    vertical-align: middle; 
+    margin-left: 1.5rem;
+    cursor: pointer;
+    
+}
+
+.xmark:hover
+{
+    font-size: 0.875rem; 
+    color: rgb(77, 15, 153); 
+    text-align: right; 
+    vertical-align: middle; 
+    margin-left: 1.5rem;
+    }
+
+.qmark
+{
+    font-size: 1rem; 
+    color: rgb (51, 51, 51); 
+    text-align: right; 
+    vertical-align: middle; 
+    margin-left: 1.5rem;
+    cursor: pointer;
+}
+
+.qmark:hover
+{
+font-size: 1rem; 
+color: rgb(77, 15, 153); 
+text-align: right; 
+vertical-align: middle; 
+margin-left: 1.5rem;
+}
+
+
+.e-content
+{
+    height: 22.938rem; 
+    width: 50rem; 
+    padding: 1.5rem 1.5rem 0rem 1.5rem; 
+   
+}
+
+.dialog-footer
+{
+    height: 4.813rem; 
+    
+    padding: 1rem 0rem 1.5rem 0rem;
+   
+}
+
+.text-header
+{
+font-size: 1.5rem; 
+font-weight: 400; 
+color: rgb(51,51,51);
+text-align: left; 
+vertical-align: bottom;
+}
+
+.e-dialog 
+{
+border-radius: 0.5rem; 
+box-shadow: 0.0625rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.16);
+
+}
+
+.grid-container 
+{
+    display: grid;
+    width: 100%;
+    grid-template-columns:max-content max-content;
+    justify-content: space-between;
+    
+  }
+  
+.grid-item 
+{
+   
+    justify-content: space-between;
+   align-items: right;
+   
+    
+  }
+
+.tabcontainer
+{
+
+font-size: 20px;
+text-align: center;
+margin: 0 auto;
+    
+}
+.e-custom
+{
+height: 2.313rem; 
+min-width: 4.75rem; 
+/**witdh varia conforme texto inserido**/ 
+border-radius: 3rem; 
+margin: 0rem 1rem; 
+background-color: rgb(100, 24, 195);
+font-size: 1rem; 
+font-weight: 400; 
+color: rgb(255, 255, 255); 
+text-align: center;
+
+}
+
+.e-custom:hover
+{
+background-color: rgb(77, 15, 153);
+}
+.e-custom:disabled
+{
+background-color: rgb(245, 245, 245);
+}
+
+.e-custom2
+{
+    height: 2rem; 
+    min-width: 4.75rem; 
+    border-radius: 3rem; 
+    margin: 1rem; 
+    border: 0.063rem solid rgb(100, 24, 195); 
+    font-size: 1rem; 
+    font-weight: 400; 
+    color: rgb(100, 24, 195); 
+    text-align: center;
+}
+
+.e-custom:hover2
+{
+background-color: rgb(248, 242, 255);
+}
+.ecustom3
+{
+    height: 2.313rem; 
+    min-width: 12rem; 
+    /**witdh varia conforme texto inserido**/ 
+    border-radius: 3rem; 
+    margin: 0rem 1rem; 
+    background-color: rgb(100, 24, 195);
+    font-size: 1rem; 
+    font-weight: 400; 
+    color: rgb(255, 255, 255); 
+    text-align: center;
+
+}
+
+.ecustom3:hover
+{
+    background-color: rgb(77, 15, 153);
+
+}
+
+
+
+
+.e-tab .e-tab-header .e-indicator
+{
+    background: none; 
+}
+
+.e-tab .e-tab-header .e-toolbar-item.e-active  
+{
+font-size: 1rem; 
+font-weight: 300; 
+color: rgb(255, 255, 255); 
+text-align: center; 
+vertical-align: middle;
+min-width: 10rem; 
+ border-radius: 2rem; 
+background-color: rgb(100, 24, 195);
+height: 2.75rem;
+
+}
+
+.e-tab .e-tab-header .e-toolbar-item.e-active .e-tab-text,
+.e-tab .e-tab-header .e-toolbar-item.e-active .e-tab-icon 
+{
+    font-size: 1rem; 
+     font-weight: 300; 
+    color: rgb(247, 245, 250); 
+    text-align: center; 
+    vertical-align: middle;
+    max-width: 21rem;
+    border-radius: 2rem; 
+   
+}
+.e-tab .e-tab-header .e-toolbar-items {
+      
+    height: 4.75rem;
+    text-align: center;
+    margin: 0 auto;
+}
+.e-tab .e-tab-header .e-toolbar-item .e-tab-wrap:hover {
+    font-size: 1rem; 
+    font-weight: 300; 
+    color: rgb(255, 255, 255); 
+    text-align: center; 
+    vertical-align: middle;
+     
+     border-radius: 2rem; 
+       
+    }
+.e-tab .e-tab-header .e-toolbar-item .e-tab-text{
+    color:rgb(100, 24, 195);
+    font-size: 1rem; 
+   
+}
+
+
+/** Text Area Formatting **/
+
+.e-input-group:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left), .e-input-group.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap, .e-input-group.e-control-wrapper:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left), .e-input-group.e-control-wrapper.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap, .e-float-input.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap, .e-float-input.e-control-wrapper.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap {
+    height: 2.5rem; 
+    width: 12rem;
+    border-radius: 0.313rem; 
+    border: solid 0.063rem; 
+    padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+   
+}
+
+.e-input-group:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left), .e-input-group.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap, .e-input-group.e-control-wrapper:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left), .e-input-group.e-control-wrapper.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap, .e-float-input.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap, .e-float-input.e-control-wrapper.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap {
+    height: 2.5rem; 
+    width: 12rem;
+    border-radius: 0.313rem; 
+    border: solid 0.063rem; 
+    padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+   
+}
+
+
+.label-container
+{
+    margin:2.5rem;
+    
+    position: relative;
+}
+
+.label
+{
+position:absolute;
+top:-15px;
+left:240px;
+z-index: 100;
+background-color: rgb(255, 255, 255); 
+border-radius: 0.313rem; 
+ border: solid 0.063rem; 
+border-color: rgb(216, 216, 216); 
+padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+color: rgb(125, 125, 125); 
+font-size: 0.75rem; 
+font-weight: 300; 
+line-height: 1rem; 
+text-align: left; 
+margin-left: 0.5rem;
+}
+
+/** Input Mask formatting **/
+
+.e-input-group, .e-input-group.e-control-wrapper, .e-float-input, .e-float-input.e-input-group, .e-float-input.e-control-wrapper, .e-float-input.e-input-group.e-control-wrapper {
+height: 2.5rem; 
+
+background-color: rgb(255, 255, 255); 
+border-radius: 0.313rem; 
+border: solid 0.063rem; 
+border-color: red ;
+padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+
+}
+.wrap{
+    height: 2.5rem; 
+    width:11rem; 
+    text-align: center;
+    margin:0 auto
+
+}
+
+.wrap:hover label{
+   color: rgb(100, 24, 195); 
+}
+
+/** Input Mask hover formatting **/
+.e-input-group:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left), .e-input-group.e-control-wrapper:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left), .e-float-input.e-control-wrapper:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left), .e-float-input:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left), .e-input-group.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled) .e-input-in-wrap:hover, .e-input-group.e-control-wrapper.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled) .e-input-in-wrap:hover, .e-float-input.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled) .e-input-in-wrap:hover, .e-float-input.e-control-wrapper.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled) .e-input-in-wrap:hover, .e-float-input:hover:not(.e-input-group):not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled) input:not([disabled]), .e-float-input:hover:not(.e-input-group):not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled) textarea:not([disabled]), .e-float-input.e-control-wrapper:hover:not(.e-input-group):not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled) input:not([disabled]), .e-float-input.e-control-wrapper:hover:not(.e-input-group):not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled) textarea:not([disabled]), .e-float-input.e-control-wrapper.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled) .e-input-in-wrap:hover{
+   
+    border-color: rgb(100, 24, 195);
+}
+
+/**
+.e-input-group:not(.e-success):not(.e-warning):not(.e-error) input.e-input:focus, .e-input-group.e-control-wrapper:not(.e-success):not(.e-warning):not(.e-error) input.e-input:focus, .e-input-group:not(.e-success):not(.e-warning):not(.e-error).e-input-focus input.e-input, .e-input-group.e-control-wrapper:not(.e-success):not(.e-warning):not(.e-error).e-input-focus input.e-input, .e-input-group:not(.e-success):not(.e-warning):not(.e-error) textarea.e-input:focus, .e-input-group.e-control-wrapper:not(.e-success):not(.e-warning):not(.e-error) textarea.e-input:focus {
+    border: 1px solid red;
+} **/
+
+.e-input-group.e-control-wrapper
+{
+    border: 1px solid red;
+}
+
+
+
+/**
+.e-input-group input.e-input, .e-float-input.e-input-group input, .e-input-group.e-control-wrapper input.e-input, .e-float-input.e-input-group.e-control-wrapper input, .e-float-input input, .e-float-input.e-control-wrapper input {
+    min-height: 22px;
+    border: 1px solid blue;
+    border-radius: 30px;
+    margin:10px;
+    padding: 10px;
+
+} **/
+
+
+.e-input-group[_ngcontent-ng-c2747533085]:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left), .e-input-group.e-float-icon-left[_ngcontent-ng-c2747533085]:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap[_ngcontent-ng-c2747533085], .e-input-group.e-control-wrapper[_ngcontent-ng-c2747533085]:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left), .e-input-group.e-control-wrapper.e-float-icon-left[_ngcontent-ng-c2747533085]:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap[_ngcontent-ng-c2747533085], .e-float-input.e-float-icon-left[_ngcontent-ng-c2747533085]:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap[_ngcontent-ng-c2747533085], .e-float-input.e-control-wrapper.e-float-icon-left[_ngcontent-ng-c2747533085]:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap[_ngcontent-ng-c2747533085] {
+    height: 2.5rem; 
+    width:11rem; 
+    background-color: rgb(255, 255, 255); 
+    border-radius: 0.313rem; 
+    border: solid 0.063rem; 
+    border-color: rgb(216, 216, 216);
+    padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+}
