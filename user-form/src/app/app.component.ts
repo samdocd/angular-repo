@@ -122,21 +122,21 @@ sForm: FormGroup;
       let total = check1 + check2 +check3 + check4 + check5 + check6 + check7 + check8
       let division = total % 11
       let final = 11 - division
-      console.log(final)
+      
       if(final > 9 )
       {
         final = 0;
       }
-      console.log(controldigit)
+      
 
       if(final == controldigit)
       {
-        console.log("Niff is correct")
+        
         nifferror=1;
       }else
       {
         nifferror=0;
-        console.log(nifferror)
+        
       }
 
       if(nifferror==0)
